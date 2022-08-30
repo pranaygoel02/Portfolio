@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  height: 100%;
+}
+.Main-App{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+html,body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+body{
+  font-family: 'Poppins',sans-serif;
+}
+.rotate{
+  transform: rotate(90deg);
+}
+.rotate-back{
+  transform: rotate(0deg);
+}
+
+.sketch-img{
+  width: 100%;
+}
+#quote{
+  font-size: 2em;
+  line-height: 1.2em;
+}
+.graphic-header{
+  border-bottom : 0.01em solid rgba(0, 0, 0, 0.496);
+  font-size : 2em;
+  text-align : center;
+  letter-spacing : 0.1px;
+  padding : 0.7em 0em 0.5em;
+}
+
+.graphic-tools{
+  padding : 1em;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  /* gap : 0.5em; */
+}
+
+.tool{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.tool-icon{
+  width: 70%;
+}
+#pen-tool{
+  display: none;
+}
+.about-me{
+  padding: 0em 0.7em;
+}
+
+#quote{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.graphic-img{
+  width: 100%;
+}
+.expanded-div{
+  gap: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.496);
+}
+
+@media only screen and (min-width: 768px) {
+  .graphic-header{
+    border-bottom : 1px solid rgba(0, 0, 0, 0.496);
+    font-size : 2em;
+    text-align : center;
+    padding : 0.7em 6em;
+  }
+  .flex-row .graphic-tools{
+    width: 100%;
+    height: 30em;
+    flex-direction: column;
+    position: relative;
+  }
+  .tool-icon{
+    width: 65%;
+  }
+  #pen-tool{
+    display: inline;
+    width : 60%;
+    transform: translateY(1em) translateX(-2em);
+  }
+  #ps{
+    position: absolute;
+    width: 40%;
+    transform: translateY(-11em) translateX(-8em);
+  }
+  #ai,#figma{
+    position: absolute;
+  }
+  #ai{
+    transform: translateX(11em) translateY(-2em);
+    width: 38%;
+    /* animation-delay: 0.5s; */
+  }
+  #figma{
+    transform: translateX(-10em) translateY(12em);
+    width: 40%;
+    /* animation-delay: 0.6s;  */
+  }
+  #graphic-about{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.4em;
+    width: 100%;
+  }
+  #graphic-about p{
+    margin-top: 0;
+  }
+  #quote{
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+  #graphic-sub-header{
+    display: none;
+  }
+
+  .animate-tool{
+    visibility: hidden;
+    /* animation: animateTool 1s linear infinite; */
+    animation: animateTool 2s infinite ease;
+    animation-delay: 2s;
+  }
+  #poster,#social,#brand{
+    display: none;
+  }
+
+  .graphic-img{
+    width: 30%;
+  }
+  #m1,#m2{
+    display: none;
+  }
+
+  #posters,#socials,#brands{
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-basis: 30%; */
+    padding: 3em 8em;
+  }
+ 
+  @keyframes animateTool {
+      0%{
+        visibility: hidden;
+        opacity: 0;
+          width: 0%;
+          scale: 0;
+        }
+        30%{
+          visibility: visible;
+          opacity: 1;
+          scale: 1;
+          width: 30%;
+        }
+        100%{
+          visibility: visible;
+          opacity: 1;
+          scale: 0.9;
+          width: 30%;
+        }
+  }
+  
+  
+}

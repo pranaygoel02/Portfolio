@@ -1,0 +1,70 @@
+.project-links{
+    width: 100%;
+}
+.project-links .about-skills{
+    width: 100%;
+    text-align: left;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.project-links .about-skills > h1{
+    position: absolute;
+    text-align: right;
+    transform: translateX(3em);
+    font-size: 4.5em;
+    color: rgba(59, 119, 204, 0.333);
+    margin-bottom: 0;
+}
+.project-links .about-skills:nth-child(2) > h1{
+    transform: translateX(3em) translateY(0em);
+}
+.project-links .about-skills > li{
+    width: 90%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .project-links{
+        margin-top: 0;
+    }
+    .project-links .about-skills > h1{
+        position: relative;
+        width: 30%;
+        transform: translateX(0) translateY(0);
+        font-size: 2.55em;
+        margin-bottom: 0;
+        color: rgba(59, 119, 204, 0.333);
+        text-align: right;
+    }
+    .project-links .about-skills > li >h1{
+        font-size: 2em;
+        margin-bottom: 0;
+        transition: all 0.5s ease-out;
+    }
+
+    .project-links .about-skills > li >h1:hover:after, .project-links .about-skills > li >h1:focus:after{
+        content:' >';
+        position: relative;
+        transform: translate(1em, 5em);
+    }
+
+    .project-links .about-skills:nth-child(2) > h1{
+        transform: translateX(0) translateY(0);
+    }
+    .project-links .about-skills{
+        width: 100%;
+        text-align: left;
+        padding: 0 4em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .project-links .about-skills:hover{
+        background: rgb(22,22,22);
+        color: white;
+    }
+}

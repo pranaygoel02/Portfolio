@@ -1,0 +1,14 @@
+.footer-container{
+    flex-direction: row;
+    width: 100%;
+    padding: 1.5em 2.5em;
+    background-color: rgb(23, 23, 23);
+    color: rgba(255, 255, 255, 0.678);
+    margin: 0;
+}
+.footer-container p{
+    font-size: 0.8em;
+}
+.footer-link{
+    color: rgba(255, 255, 255, 0.678);
+}
