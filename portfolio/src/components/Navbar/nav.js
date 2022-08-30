@@ -9,12 +9,12 @@ export default function nav({page}) {
         <div className='nav-ribbon'></div>
     <nav>
         <div className='container'>
-            <h1>Pranay Goel</h1>
+            <h1><Link style={{"color":"black"}} to={"/"}>Pranay Goel</Link></h1>
             <div className='navLinks'>
                 {page === "Project"?
-                <li><Link to="/"> Home</Link></li>
+                <li className='navbar-link'><Link to="/"> Home</Link></li>
                 :
-                <li><Link to="/project">Projects</Link></li>}
+                <li className='navbar-link'><Link to="/project">Projects</Link></li>}
             </div>
         </div>
     </nav>

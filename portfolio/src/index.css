@@ -62,7 +62,7 @@ body{
 .tool-icon{
   width: 70%;
 }
-#pen-tool{
+#pen-tool,#web-lottie{
   display: none;
 }
 .about-me{
@@ -82,6 +82,19 @@ body{
   border-bottom: 1px solid rgba(0, 0, 0, 0.496);
 }
 
+.webdev-tools{
+  padding: 1em;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+}
+.webdev-tools li{
+  width: 100%;
+}
+
+
 @media only screen and (min-width: 768px) {
   .graphic-header{
     border-bottom : 1px solid rgba(0, 0, 0, 0.496);
@@ -98,7 +111,7 @@ body{
   .tool-icon{
     width: 65%;
   }
-  #pen-tool{
+  #pen-tool,#web-lottie{
     display: inline;
     width : 60%;
     transform: translateY(1em) translateX(-2em);
@@ -126,6 +139,17 @@ body{
     margin: 0;
     justify-content: center;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.4em;
+    width: 100%;
+  }
+  #webdev-about{
+    padding: 1em 0;
+    margin: 0;
+    justify-content: center;
+    /* align-self: center; */
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -187,6 +211,58 @@ body{
           width: 30%;
         }
   }
-  
-  
+  .webdev-tools{
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    gap: 0;
+  }
+  .webdev-tools li{
+    width: 100%;
+  }
+  .webdev-tools li .fa-4x{
+    font-size: 10em;
+  }
+  #web-lottie{
+    position: relative;
+    width: 98%;
+    padding: 2em;
+    transform: translateY(-1em);
+  }
+  /* #html{
+    position: relative;
+  } */
+  #html,#css,#js,#react{
+    position: absolute;
+  }
+  #html{
+    font-size: 0.85em;
+    transform: translateX(-17em) translateY(-15em);
+  }
+  #react{
+    font-size: 0.8em;
+    transform: translateX(15em) translateY(-11em);
+  }
+  #js{
+    font-size: 0.7em;
+    transform: translateX(-21em) translateY(13em);
+  }
+  #css{
+    font-size: 0.8em;
+    transform: translateX(-24em) translateY(-2.5em);
+  }
+  .animate-web-tool{
+    animation: animateWebTool 6.5s linear infinite;
+  }
+  @keyframes animateWebTool {
+    0%{
+    }
+    50%{
+      translate: 0em 1em;
+    }
+    100%{
+      translate: 0em 0em;
+    }
+  }
+
 }
