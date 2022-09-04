@@ -1,4 +1,9 @@
 .social-links{
     display:flex;
     gap: 0.5em;
+    justify-content: space-between;
+    
+}
+.social-links a{
+    font-size: 2em;
 }

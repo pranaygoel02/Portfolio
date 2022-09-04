@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function portfolio() {
   return (
     <div className='projects-list'>
-        <ul className='navLinks project-links'>
+        <ul className='project-links'>
             <Link className='about-skills' style={{"borderTop":"none"}} to="/project/web-development">
                 <li><h1>Web Development</h1></li>
                 <h1>01</h1>

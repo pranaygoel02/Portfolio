@@ -3,35 +3,13 @@ import Nav from '../components/Navbar/nav'
 import { useRef, useEffect, useState } from 'react'
 import Lottie from 'lottie-web'
 import Typewriter from 'typewriter-effect'
+import {posters , socials, branding} from '../utils/graphics'
 
 import Ps from '../components/images/icons/adobe-photoshop.svg'
 import Ai from '../components/images/icons/adobe-illustrator.svg'
 import figma from '../components/images/icons/figma.svg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-import Iris1 from '../components/images/posters/iris_poster.jpg'
-import Iris2 from '../components/images/posters/iris_mockup1.jpg'
-import Iris3 from '../components/images/posters/iris_mockup2.jpg'
-import bgmi from '../components/images/posters/BGMI .png'
-import pes1 from '../components/images/posters/PES.png'
-import pes2 from '../components/images/posters/pes2.jpg'
-import comm from '../components/images/posters/comm.jpg'
-import sherlock from '../components/images/posters/sherlock.jpg'
-
-import may from '../components/images/socials/may.png'
-import girl from '../components/images/socials/girl.jpg'
-import plastic from '../components/images/socials/plastic.png'
-import KK from '../components/images/socials/KK.png'
-import water from '../components/images/socials/water.png'
-import j from '../components/images/socials/j.jpg'
-import web from '../components/images/socials/web.jpg'
-
-import ugg from '../components/images/branding/UGG.png'
-import bru from '../components/images/branding/Bru.jpg'
-import m1 from '../components/images/branding/m1.jpg'
-import m2 from '../components/images/branding/m2.jpg'
-import m3 from '../components/images/branding/m3.jpg'
-import estd from '../components/images/branding/brand.jpg'
 import { svgIconClasses } from '@mui/material'
 
 
@@ -103,27 +81,22 @@ export default function Graphic() {
                 <h1>01</h1>
             </div>
             <div ref={posterRef} id="posters" className='container expanded-div' style={{"display":"none"}}>
-              <img className='graphic-img' src={Iris1}/>
-              <img id='m1' className='graphic-img' src={Iris2}/>
-              <img id='m2' className='graphic-img' src={Iris3}/>
-              <img className='graphic-img' src={bgmi}/>
-              <img className='graphic-img' src={pes1}/>
-              <img className='graphic-img' src={pes2}/>
-              <img className='graphic-img' src={comm}/>
-              <img className='graphic-img' src={sherlock}/>
+              {posters.map(poster => {
+                return(
+                  <img className='graphic-img' src={require(`../components/images/posters/${poster.img}`)}/>
+                )
+              })}
             </div>
             <div className='about-skills' onClick={showSocials} style={{"cursor":"pointer"}}>
                 <li ><h1>Social Media Creatives <ArrowForwardIosIcon ref={socailBtnRef} id="social"/></h1></li>
                 <h1>02</h1>
             </div>
             <div ref={socialRef} id="socials" className='container expanded-div' style={{"display":"none"}}>
-              <img className='graphic-img' src={may}/> 
-              <img className='graphic-img' src={KK}/>
-              <img className='graphic-img' src={plastic}/>
-              <img className='graphic-img' src={water}/>
-              <img className='graphic-img' src={web}/>
-              <img className='graphic-img' src={girl}/>
-              <img className='graphic-img' src={j}/>
+              {socials.map(social => {
+                return(
+                  <img className='graphic-img' src={require(`../components/images/socials/${social.img}`)}/>
+                )
+              })}
             </div>
             <div className='about-skills' onClick={showBrands} style={{"cursor":"pointer"}}>
                 <li><h1>Branding <ArrowForwardIosIcon ref={brandBtnRef} id="brand"/></h1></li>
@@ -131,13 +104,17 @@ export default function Graphic() {
             </div>   
             <div ref={brandRef} id="brands" className='container expanded-div' style={{"display":"none"}}>
                 <h3>UGG Logo</h3>
-                <img className='graphic-img' src={ugg}/>
+                {branding.ugg.map(brand => {
+                return(
+                  <img className='graphic-img' src={require(`../components/images/branding/${brand.img}`)}/>
+                )
+              })}
                 <h3>BRU Coffee Rebranding</h3>
-                <img className='graphic-img' src={bru}/>
-                <img className='graphic-img' src={m1}/>
-                <img className='graphic-img' src={m2}/>
-                <img className='graphic-img' src={m3}/>
-                <img className='graphic-img' src={estd}/>
+                {branding.bru.map(brand => {
+                return(
+                  <img className='graphic-img' src={require(`../components/images/branding/${brand.img}`)}/>
+                )
+              })}
             </div>
         </ul>
         <p style={{"padding":"1em","fontSize":"0.8em"}}>*<a href="https://iconscout.com/icons/figma" target="_blank">Figma Icon</a> by <a href="https://iconscout.com/contributors/icon-54" target="_blank">Icon 54</a></p>

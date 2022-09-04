@@ -9,7 +9,7 @@ export default function about() {
     <div className='container about-container' style={{"paddingTop": "1em"}}>
         <h1 className='about-header'>About Me</h1>
         <img className='stroke' src={Stroke}></img>
-        <ul className='navLinks' style={{"marginTop":"1em"}}>
+        <ul className='aboutLinks' style={{"marginTop":"1em"}}>
             <li className='about-skills'><h4>Coder</h4></li>
             <li className='about-skills'><h4>Graphic Designer</h4></li>
             <li className='about-skills'><h4>Web Developer</h4></li>

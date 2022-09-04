@@ -8,10 +8,10 @@ import './socials.css'
 export default function socials() {
   return (
     <ul className='social-links'>
-          <a href='https://www.instagram.com/pranay_goel__/' target="blank_"><InstagramIcon/></a>
-          <a href='https://twitter.com/pranay_goel__' target="blank_"><TwitterIcon/></a>
-          <a href='https://www.linkedin.com/in/pranay-goel-01023a1b1/' target="blank_"><LinkedInIcon/></a>
-          <a href='https://github.com/pranaygoel02' target="blank_"><GitHubIcon/></a>
+          <a href='https://www.instagram.com/pranay_goel__/' target="blank_"><InstagramIcon sx={{fontSize: 30}}/></a>
+          <a href='https://twitter.com/pranay_goel__' target="blank_"><TwitterIcon sx={{fontSize: 30}}/></a>
+          <a href='https://www.linkedin.com/in/pranay-goel-01023a1b1/' target="blank_"><LinkedInIcon sx={{fontSize: 30}}/></a>
+          <a href='https://github.com/pranaygoel02' target="blank_"><GitHubIcon sx={{fontSize: 30}}/></a>
     </ul>
   )
 }

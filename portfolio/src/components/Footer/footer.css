@@ -1,4 +1,4 @@
-.footer-container{
+#footer-container{
     flex-direction: row;
     width: 100%;
     padding: 1.5em 2.5em;
@@ -11,4 +11,10 @@
 }
 .footer-link{
     color: rgba(255, 255, 255, 0.678);
+}
+
+@media only screen and (min-width: 820px) {
+    #footer-container{
+        padding: 1.5em 11em;
+    }
 }

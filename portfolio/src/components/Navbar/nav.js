@@ -8,13 +8,11 @@ export default function nav({page}) {
     <>
         <div className='nav-ribbon'></div>
     <nav>
-        <div className='container'>
+        <div id='nav-container' className='container'>
             <h1><Link style={{"color":"black"}} to={"/"}>Pranay Goel</Link></h1>
             <div className='navLinks'>
-                {page === "Project"?
-                <li className='navbar-link'><Link to="/"> Home</Link></li>
-                :
-                <li className='navbar-link'><Link to="/project">Projects</Link></li>}
+                {page!="Project" && <li className='navbar-link'><Link to="/project">Projects</Link></li>}
+                <li className='navbar-link'><Link to="/contact">Get in Touch</Link></li>
             </div>
         </div>
     </nav>

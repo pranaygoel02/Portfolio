@@ -8,6 +8,12 @@
 #root{
   height: 100%;
 }
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  display: none;
+}
 .Main-App{
   display: flex;
   height: 100vh;
@@ -93,7 +99,9 @@ body{
 .webdev-tools li{
   width: 100%;
 }
-
+#webdev-work{
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   .graphic-header{
@@ -190,6 +198,10 @@ body{
     /* flex-basis: 30%; */
     padding: 3em 8em;
   }
+
+  #webdev-work{
+    display: block;
+  }
  
   @keyframes animateTool {
       0%{
@@ -223,6 +235,7 @@ body{
   .webdev-tools li .fa-4x{
     font-size: 10em;
   }
+  
   #web-lottie{
     position: relative;
     width: 98%;
@@ -266,3 +279,4 @@ body{
   }
 
 }
+

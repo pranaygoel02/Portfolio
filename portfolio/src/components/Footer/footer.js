@@ -9,7 +9,7 @@ import Socials from '../social links/socials'
 
 export default function footer() {
   return (
-    <div className='container footer-container'>
+    <div id='footer-container' className='container'>
         <div>
         <Socials/>
         <p>&copy; Pranay Goel, 2022</p>
