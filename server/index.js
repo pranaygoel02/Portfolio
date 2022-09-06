@@ -4,6 +4,9 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
 
+require('dotenv').config();
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
@@ -20,13 +23,13 @@ app.post("/sendEmail",(req,res)=>{
         service: 'Gmail',
         port: 465,
         auth: {
-            user: "goel.2002pranay@gmail.com",
-            pass: "kzbofyfbwewnqtdt"
+            user: process.env.MAIL_ID,
+            pass: process.env.MAIL_PASS
         }
     });
     let mailOptions = {
         from: data.emailId,
-        to: "goel.2002pranay@gmail.com",
+        to: process.env.MAIL_ID,
         subject: `Message from ${data.fullName} - ${data.subject}`,
         html: `
             <h3>Informations</h3>
@@ -40,7 +43,7 @@ app.post("/sendEmail",(req,res)=>{
     };
     smtpTransport.sendMail(mailOptions,(error,response)=>{
         if(error){
-            res.send(error)
+            res.send('error')
         }
         else{
             res.send("success");

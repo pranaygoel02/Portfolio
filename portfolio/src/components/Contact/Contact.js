@@ -60,7 +60,7 @@ export default function Contact() {
                 },2000);
         })
         .catch(error => {
-            console.log("Error. Can''t send mail.");
+            console.log("Error. Can't send mail.");
         })
         e.preventDefault();
     }
