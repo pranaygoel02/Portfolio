@@ -15,6 +15,7 @@ app.get("/", (req,res)=>{
     res.send("Hello");
 })
 
+app.get()
 
 app.post("/sendEmail",(req,res)=>{
     let data = req.body;
