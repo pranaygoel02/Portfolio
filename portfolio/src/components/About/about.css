@@ -18,7 +18,8 @@
     border-bottom: 1px solid rgba(42, 42, 42, 0.367);
 }
 .about-skills h4{
-    font-size: 1.4em;
+    font-size: 1.72em;
+    padding: 0.05em 0;
 }
 .about-skills:nth-child(1){
     border-top: 1px solid rgba(42, 42, 42, 0.367);
@@ -54,6 +55,7 @@
     }
     .about-skills h4{
         font-size: 1em;
+        padding: 0 0;
     }
     .about-pic{
         display: flex;
