@@ -75,7 +75,7 @@ export default function Graphic() {
           </div>
         </div>
         <h1 id='graphic-sub-header' className='graphic-header' style={{"margin":"1em auto","border":"1px solid rgba(0, 0, 0, 0.496)","borderLeft":"0px","borderRight":"0px","fontSize":"1.25em","textAlign":"left","letterSpacing":"0.1px","padding":"0.7em 0.5em"}}>My Work</h1>
-        <ul className='navLinks project-links' style={{"marginTop":"1em"}}>
+        <ul className='navLinks project-links' style={{"marginTop":"1em","gap":"0"}}>
             <div className='about-skills' onClick={showPosters} style={{"borderTop":"none","cursor":"pointer"}}>
                 <li><h1>Posters <ArrowForwardIosIcon ref={posterBtnRef} id="poster"/></h1></li>
                 <h1>01</h1>
