@@ -1,10 +1,15 @@
 #footer-container{
-    flex-direction: row;
+    flex-direction: column-reverse;
     width: 100%;
     padding: 1.5em 2.5em;
     background-color: rgb(23, 23, 23);
     color: rgba(255, 255, 255, 0.678);
     margin: 0;
+}
+.footer-links{
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 .footer-container p{
     font-size: 0.8em;
@@ -15,6 +20,16 @@
 
 @media only screen and (min-width: 820px) {
     #footer-container{
+        flex-direction: row;
         padding: 1.5em 11em;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 0em;
+        margin-bottom: 0em;
+    }
+    .footer-link:hover{
+        color: rgba(255, 255, 255, 0.978);
     }
 }

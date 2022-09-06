@@ -6,4 +6,9 @@
 }
 .social-links a{
     font-size: 2em;
+    transition: all 200ms ease;
+}
+.social-links a:hover{
+    transform: translateY(-4px);
+    scale: 1.15;
 }
