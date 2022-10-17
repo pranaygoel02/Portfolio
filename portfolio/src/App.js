@@ -7,6 +7,8 @@ import Footer from './components/Footer/footer'
 import Nav from './components/Navbar/nav' 
 import {Route, Routes } from 'react-router-dom'
 import Contact from './screens/Contact'
+import TestimonialCard from './components/Testimonial/TestimonialCard'
+import TestimonialBtn from './components/Testimonial/TestimonialBtn'
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/contact"  element={<Contact />}/>
         <Route path='*' element={<h1>Oops! 404 Not Found.</h1>}/>
       </Routes>
+      <TestimonialBtn/>
       <Footer/>  
     </div>
   );

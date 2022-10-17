@@ -73,6 +73,10 @@ const posters = [{
 
 const socials = [
     {
+        id: 0,
+        img: 'iaf.png'
+    },
+    {
         id: 1,
         img: 'may.png'
     },

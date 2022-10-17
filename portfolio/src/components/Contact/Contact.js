@@ -103,7 +103,7 @@ export default function Contact() {
                 <form className='form' autoComplete='none' onSubmit={handleSubmit}>
                     <div className='form-element'>
                         {/* <label className='form-label'>Name</label> */}
-                        <input className='form-input' name='name' value={name} onChange={handleName} required type={'text'} placeholder={'Full Name'} autoFocus autoComplete='none'></input>
+                        <input className='form-input' name='name' value={name} onChange={handleName} required type={'text'} placeholder={'Full Name'} autoComplete='none'></input>
                     </div>
                     <div className='form-element'>
                         {/* <label className='form-label'>Email</label> */}

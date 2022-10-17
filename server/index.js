@@ -51,6 +51,40 @@ app.post("/sendEmail",(req,res)=>{
     })
     smtpTransport.close();
 })
+app.post("/sendTestimonial",(req,res)=>{
+    let data = req.body;
+    console.log(data);
+    let smtpTransport = nodemailer.createTransport({
+        service: 'Gmail',
+        port: 465,
+        auth: {
+            user: process.env.MAIL_ID,
+            pass: process.env.MAIL_PASS
+        }
+    });
+    let mailOptions = {
+        from: data.emailId,
+        to: process.env.MAIL_ID,
+        subject: `Message from ${data.fullName}`,
+        html: `
+            <h3>Informations</h3>
+            <ul>
+                <li>Name: ${data.fullName}</li>
+                <li>Email: ${data.emailId}</li>
+            </ul>
+            <p>${data.message}</p>
+        `
+    };
+    smtpTransport.sendMail(mailOptions,(error,response)=>{
+        if(error){
+            res.send('error')
+        }
+        else{
+            res.send("success");
+        }
+    })
+    smtpTransport.close();
+})
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, ()=>{
     console.log(`server started at port ${PORT}`);

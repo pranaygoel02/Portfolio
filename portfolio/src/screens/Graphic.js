@@ -29,7 +29,13 @@ export default function Graphic() {
   const brandBtnRef = useRef();
   const brandRef = useRef();
 
-
+  // useEffect(()=>{
+  //   window.scrollTo({
+  //     top:0,
+  //     left: 0,
+  //     behavior:'smooth'
+  //   })
+  // },[])
 
   function showPosters(){  
     posterBtnRef.current.classList.toggle("rotate");
@@ -98,7 +104,7 @@ export default function Graphic() {
                 )
               })}
             </div>
-            <div className='about-skills' onClick={showBrands} style={{"cursor":"pointer"}}>
+            {/* <div className='about-skills' onClick={showBrands} style={{"cursor":"pointer"}}>
                 <li><h1>Branding <ArrowForwardIosIcon ref={brandBtnRef} id="brand"/></h1></li>
                 <h1>03</h1>
             </div>   
@@ -115,7 +121,7 @@ export default function Graphic() {
                   <img className='graphic-img' src={require(`../components/images/branding/${brand.img}`)}/>
                 )
               })}
-            </div>
+            </div> */}
         </ul>
         <p style={{"padding":"1em","fontSize":"0.8em"}}>*<a href="https://iconscout.com/icons/figma" target="_blank">Figma Icon</a> by <a href="https://iconscout.com/contributors/icon-54" target="_blank">Icon 54</a></p>
     </div>

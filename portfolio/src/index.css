@@ -16,6 +16,7 @@ html::-webkit-scrollbar{
 }
 .Main-App{
   display: flex;
+  position: relative;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
@@ -102,13 +103,219 @@ body{
 #webdev-work{
   display: none;
 }
+/* .sticky{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+} */
+.splash-wrapper{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  animation: animate-splash-wrapper 4.5s ease-out forwards;
+}
+.splash-container{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* background-color: rgb(1, 1, 1); */
+  /* background: linear-gradient(-132deg, rgb(32, 32, 32) 0%, rgb(19, 18, 19) 34%, rgb(0, 0, 0) 100%); */
+  background-image: url('./components/images/MyPhoto.jpeg');
+  background-size: cover;
+  background-position: bottom left;
+  background-attachment: fixed;
+  width: 100vw;
+  transition: all 1s ease;
+  touch-action: none;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  animation: animate-splash 4.5s ease-in-out forwards;
+  overflow: hidden;
+}
+.hidden{
+  overflow-y: hidden;
+}
+.splash-title{
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-splash-text 1s ease-in forwards;
+  transition: all 1s ease;
+  font-size: 3em;
+  padding: 0;
+  margin-left: 1em;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;  
+  position: -webkit-sticky;
+}
+.splash-title::after{
+  content: '';
+  font-weight: 400;
+  font-size: 0.5em;
+  animation: animate-after 1.5s ease forwards;
+  animation-delay: 1.5s;
+}
+@keyframes animate-after {
+  0%{
+    content: '/';
+  }
+  33%{
+    content: "// ";
+  }
+  40%{
+    content: "// M";
+  }
+  43%{
+    content: "// My";
+  }
+  48%{
+    content: "// Mys";
+  }
+  53%{
+    content: "// Myse";
+  }
+  58%{
+    content: "// Mysel";
+  }
+  63%{
+    content: "// Myself";
+  }
+  73%{
+    content: "// Myself P";
+  }
+  78%{
+    content: "// Myself Pr";
+  }
+  83%{
+    content: "// Myself Pra";
+  }
+  88%{
+    content: "// Myself Pran";
+  }
+  92%{
+    content: "// Myself Prana";
+  }
+  100%{
+    content: "// Myself Pranay";
+  }
+}
+@keyframes animate-splash-text {
+  0%{
+    background-position: left;
+    background: white;
+    opacity: 0;
+    margin-bottom: -100px;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  100%{
+    margin-bottom: 0;
+    opacity: 1;
+    
+    background: rgb(255, 255, 255);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes animate-splash {
+  0%{
+    opacity: 0;
+    
+  }
+  20%{
+    opacity: 1;
+  }
+  75%{
+    height: 100vh;
+  }
+  80%{
+    /* opacity: 0.8; */
+  }
+  100%{
+    /* opacity: 0; */
+    height: 0;
+  }
+}
+
+@keyframes animate-splash-wrapper {
+  0%{
+    opacity: 1;
+  }
+  75%{
+    height: 100vh;
+  }
+  100%{
+
+    height: 0;
+    /* opacity: 0.975; */
+  }
+}
+.project-link{
+  background:rgb(67, 116, 196);
+  padding: 3em 0;
+  text-align:center;
+  color:white;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.project-link:hover{
+  content: '';
+  background:rgb(35, 109, 228);
+}
+.link-texts{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 3em;
+  position:absolute;
+  padding: 3em 0;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-30%);
+  transition: transform 150ms ease-in;
+}
+.link-texts:hover{
+  transform:translateX(-50%) translateY(-68%);
+}
+.hide{
+  display: none;
+}
+.work-card{
+  padding: 0.75em 1em;
+  border-radius: 8px;
+}
+.work-card:hover{
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in;
+  background:  rgba(169, 203, 241, 0.274);
+  box-shadow: 2px 3px 8px rgba(130, 144, 160, 0.171);
+}
 
 @media only screen and (min-width: 768px) {
+  .hide{
+    display: block;
+  }
+  .splash-container{
+    background: linear-gradient(-132deg, rgb(32, 32, 32) 0%, rgb(19, 18, 19) 34%, rgb(0, 0, 0) 100%);
+  }
   .graphic-header{
     border-bottom : 1px solid rgba(0, 0, 0, 0.496);
     font-size : 2em;
     text-align : center;
     padding : 0.7em 6em;
+  }
+  .splash-title{
+    font-size: 4em;
   }
   .flex-row .graphic-tools{
     width: 100%;
@@ -153,6 +360,7 @@ body{
     font-size: 1.4em;
     width: 100%;
   }
+ 
   #webdev-about{
     padding: 1em 0;
     margin: 0;

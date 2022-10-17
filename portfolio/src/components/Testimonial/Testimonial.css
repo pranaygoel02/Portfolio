@@ -1,0 +1,49 @@
+.add-testimonial-btn{
+    color:white;
+    background:#3b78cc;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 10em;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.rotate{
+    transform: rotateZ(45deg);
+}
+
+.add-testimonial-btn:hover::after,.add-testimonial-btn:active::after,.add-testimonial-btn:focus::after{
+    content: 'Add testimonial';
+    border-radius: 10px;
+}
+
+.add-testimonial-card
+{
+    position:fixed;
+    bottom:10%;
+    right: 5%;
+    width: 90%;
+    display: none;
+    background-color: rgb(247, 251, 255);
+    border-radius: 0.8em;
+    box-shadow: 5px 5px 15px rgba(172, 181, 212, 0.322);
+    padding: 1.5em 1.5em;
+}
+.showpopup{
+    display: flex;
+    flex-direction: column;
+}
+.form-wrapper{
+    margin-top: 1em;
+}
+@media only screen and (min-width:768px){
+    .add-testimonial-card{
+        width: 30%
+    }
+}

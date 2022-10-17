@@ -21,10 +21,18 @@ export default function WebDev() {
     return () => instance.destroy();
   }, [])
 
+// useEffect(()=>{
+//   window.scrollTo({
+//     top:0,
+//     left: 0,
+//     behavior:'smooth'
+//   })
+// },[])
+
   return (
     <div>
         <Nav page={"WebDev"}/>
-        <h1 style={{"borderBottom":"0.01em solid rgba(0, 0, 0, 0.496)","fontSize":"2em","textAlign":"center","letterSpacing":"0.1px","padding":"0.7em 0em 0.5em"}}>Web Development</h1>
+        <h1 className='sticky' style={{"borderBottom":"0.01em solid rgba(0, 0, 0, 0.496)","fontSize":"2em","textAlign":"center","letterSpacing":"0.1px","padding":"0.7em 0em 0.5em"}}>Web Development</h1>
         
         <div id='webdev-flex-row' className='flex-row'>
         <ul className='webdev-tools'>

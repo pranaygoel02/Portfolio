@@ -10,12 +10,14 @@
     width: 60%;
     position: absolute;
     transform: translateY(4em);
+    transition: all 1s ease;
 }
 .about-skills{
     padding: 0.2em 0em;
     width: 90%;
     font-size: 1.2em;
     border-bottom: 1px solid rgba(42, 42, 42, 0.367);
+    position: relative;
 }
 .about-skills h4{
     font-size: 1.72em;
@@ -46,7 +48,10 @@
 }
 .about-header{
     font-size:3em;
+    transition: all 1s ease;
 }
+
+
 @media only screen and (min-width: 820px) {
     .about-container{
         flex-direction: column;
@@ -61,10 +66,28 @@
         display: flex;
         width: 40%;
         padding: 3em 0em 5em 3em;
+        transition: all 1s ease;
+        /* animation: animate-pic 5700ms ease-in ; */
     }
+    /* @keyframes animate-pic {
+        0%{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        85%{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    } */
+
     .about-header{
         font-size: 5em;
     }
+
     .flex-row{
         display: flex;
         flex-basis: 50%;
@@ -83,5 +106,6 @@
         text-align: left;
         font-size: 2.6em;
         border-bottom: 1px solid rgba(42, 42, 42, 0.367);
+        position: relative;
     }
 }

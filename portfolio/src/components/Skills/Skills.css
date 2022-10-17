@@ -1,0 +1,87 @@
+.skill-section{
+    padding:0 1em;
+    margin-top:2em;
+    width:100%;
+}
+.skill-head{
+    font-size:2.5em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: fit-content; */
+}
+.skill-head::after{
+    position: absolute;
+    content: '';
+    width: 95%;
+    /* height: 100%; */
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    background: rgba(155, 180, 235, 0.1);
+    bottom: -15%;
+    left: 0;
+    z-index: -1;
+}
+.skill-list{
+    display : flex;
+    width : 100%;
+    flex-wrap : wrap;
+    gap : 1.5em;
+    row-gap : 2em;
+    justify-content : center;
+    padding : 1.5em 0;
+}
+.skill-div{
+    display : flex;
+    height : 60px;
+    width : 60px;
+    align-items : center;
+    box-shadow : -2px 4px 8px rgba(0, 7, 20, 0.1);
+    padding : 1.2em;
+    border-radius : 50%;
+    position : relative;
+    overflow:hidden;
+    background-color: rgba(255, 255, 255, 0.884);
+}
+
+@media screen and (min-width:820px) {
+    .skill-section{
+        padding:0 10em;
+    }
+    .skill-head{
+        text-align: left;
+        justify-content: flex-start;
+        /* border-bottom:1px solid rgba(42, 42, 42, 0.367); */
+    }
+    .skill-list{
+        align-items : center;
+        padding : 3em 0;
+        row-gap : 3em;
+        gap : 3em;
+    }
+    .skill-div{
+        height : 100px;
+        width : 100px;
+        align-items : center;
+        padding : 1.2em;
+        border-radius : 50%;
+        position : relative;
+        overflow:hidden;
+        background-color: rgba(255, 255, 255, 0.884);
+    }
+    .skill-head::after{
+        width: 33%;
+        background: rgba(10,0,20,0.1);
+        aspect-ratio: auto;
+        bottom: 50%;
+        transform: translateY(50%);
+        left: -20%;
+        z-index: -1;
+        border-radius: 0;
+        height: 60px;
+        /* background: linear-gradient(to right,rgba(72, 133, 238, 0.836) ,transparent) ; */
+        background: linear-gradient(to right, rgba(176, 34, 164, 0.747) 5% , rgb(130, 24, 136) 2% , rgba(72, 133, 238, 0.836) 30% , transparent 70%);
+    }
+}

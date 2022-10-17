@@ -1,4 +1,18 @@
-const websites = [{
+const websites = [
+    {
+        id: 0,
+        name: "Currently.in",
+        description: "Currently.in is a realtime weather application that enables the user to login to the web-app natively or using Google authentication, and save/bookmark their favourite locations to look its weather quickly. It has a very responsive UI and is powered by the Accuweather API.",
+        tools:["ReactJs","Firebase","CSS"],
+        mockup: 
+        {
+            desktop:'weather.png',
+            mobile: 'weather_m.png'
+        },
+        url: 'https://currently--in.web.app/',
+        git: 'https://github.com/pranaygoel02/Weather-App/tree/dev'
+    },
+    {
     id: 1,
     name: "Bibliophilia",
     description: "Bibliophilia is a mock E-book application venture which happened as a part of UEMK's entrepreneurship subject. I made a static website to showcase an E-book subscription service.",
