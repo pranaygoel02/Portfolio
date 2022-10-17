@@ -15,13 +15,13 @@
 .skill-head::after{
     position: absolute;
     content: '';
-    width: 95%;
+    width: 80%;
     /* height: 100%; */
     border-radius: 100%;
     aspect-ratio: 1/1;
     background: rgba(155, 180, 235, 0.1);
-    bottom: -15%;
-    left: 0;
+    bottom: -140%;
+    left: -30%;
     z-index: -1;
 }
 .skill-list{

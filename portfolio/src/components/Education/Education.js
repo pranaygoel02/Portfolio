@@ -56,20 +56,20 @@ $('#choice input').on('change', function(){
 });
 
   return (
-    <section class="education-section">
-        <div id="eduaction" class="education">
-            <div class="edu-left">
+    <section className="education-section">
+        <div id="eduaction" className="education">
+            <div className="edu-left">
                 <h1>Educational Qualifications</h1>
             </div>
-            <div class="edu-right">
-                <div class="credentials">
-                    <h1 id="marks" class="marks">9.78 CGPA</h1>
-                    <h2 id="standard" class="standard">2nd Sem</h2>
+            <div className="edu-right">
+                <div className="credentials">
+                    <h1 id="marks" className="marks">9.78 CGPA</h1>
+                    <h2 id="standard" className="standard">2nd Sem</h2>
                 </div>
-                <div id="choice" class="radio">
-                    <input type="radio" class="radio-btn" id="uem" name="choose" value="uem"/>
-                    <input type="radio" class="radio-btn" id="isc" name="choose" value="isc"/>
-                    <input type="radio" class="radio-btn" id="icse" name="choose" value="icse"/>
+                <div id="choice" className="radio">
+                    <input type="radio" className="radio-btn" id="uem" name="choose" value="uem"/>
+                    <input type="radio" className="radio-btn" id="isc" name="choose" value="isc"/>
+                    <input type="radio" className="radio-btn" id="icse" name="choose" value="icse"/>
                 </div>
             </div>
         </div>

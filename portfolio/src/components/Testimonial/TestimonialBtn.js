@@ -26,16 +26,16 @@ function resetForm(){
   setMsg('');
 }
 function handleName(e){
-  console.log(e.target.value);
+  // console.log(e.target.value);
   setName(e.target.value);
 }
 function handleEmail(e){
-  console.log(e.target.value);
+  // console.log(e.target.value);
   setEmail(e.target.value);
 }
 
 function handleMsg(e){
-  console.log(e.target.value);
+  // console.log(e.target.value);
   setMsg(e.target.value);
 }
 

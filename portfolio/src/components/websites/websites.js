@@ -4,7 +4,7 @@ import Links from '../Links/links';
 import './websites.css'
 
 export default function web({projects}) {
-    console.log(projects);
+    // console.log(projects);
     return (
       <div className='project'>
       {projects.map((web) => {

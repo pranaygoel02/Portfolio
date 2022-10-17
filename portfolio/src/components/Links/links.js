@@ -2,7 +2,7 @@ import React from 'react'
 import './links.css'
 
 export default function links({links}) {
-    console.log(links);
+    // console.log(links);
   return (
     <div className='website-links'>
         <a id='code' className='link' href ={`${links.git}`} target="blank_">CODE</a>
