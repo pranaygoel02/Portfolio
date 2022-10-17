@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const { verify } = require('crypto');
 const app = express();
 
 require('dotenv').config();
@@ -85,6 +86,15 @@ app.post("/sendTestimonial",(req,res)=>{
     })
     smtpTransport.close();
 })
+
+if(process.env.NODE_ENV == "production"){
+    const path = require('path')
+    app.get('/',(req,res)=>{
+        app.use(express.static(path.resolve(__dirname,'portfolio','build')))
+        res.sendFile(path.resolve(__dirname,'portfolio','build','index.html'))
+    })
+}
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, ()=>{
     console.log(`server started at port ${PORT}`);
