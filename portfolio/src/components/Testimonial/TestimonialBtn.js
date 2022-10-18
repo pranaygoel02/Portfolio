@@ -53,7 +53,7 @@ function handleMsg(e){
 
   function handleSubmit(e){
     setSendingMail(true);
-    axios.post("/sendTestimonial",form)
+    axios.post("https://pranaygoel-server.vercel.app/sendTestimonial",form)
     .then(res => {
         setEmailSent(true);
         resetForm();

@@ -50,7 +50,7 @@ export default function Contact() {
 
     function handleSubmit(e){
         setSendingMail(true);
-        axios.post("/sendEmail",form)
+        axios.post("https://pranaygoel-server.vercel.app/sendEmail",form)
         .then(res => {
             setEmailSent(true);
             resetForm();
