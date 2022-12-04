@@ -24,6 +24,7 @@ function TimelineComponent() {
           },
         }}
       >
+      <Timelinecontent icon={'Work'} date={'November 2022'} position={"Web Developer"} organization={'URECKON'} desc={'I am currently working on the URECKATHON website.'}/>
       <Timelinecontent icon={'Award'} date={'October 2022'} position={"Ranked 6th in Intra-University coding competition- UCODE5.0"} organization={'University of Engineering and Management, Kolkata'} desc={''}/>
       <Timelinecontent icon={'Design'} date={'August 2022 - Present'} position={'Graphic Designer (Core Member)'} organization={'GDSC UEMK'} desc={"I joined my University's Google Developers Campus Chapter as a graphic designer. Here I design multiple social media creatives for the events the happen."}/>
       <Timelinecontent icon={'Award'} date={'August 2022'} position={"Vice Chancellor's Award for Overall Performance 2021-22"} organization={'University of Engineering and Management, Kolkata'} desc={''}/>
