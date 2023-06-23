@@ -88,6 +88,7 @@ function Contact() {
   return (
     <div className="w-full flex flex-col min-h-screen items-start justify-start gap-8 p-4 py-24 md:px-8 pb-32">
       <PageHead title={"Get in touch"} />
+      <p className="text-center w-full text-sm">No matter if it's a simple question you want to ask or talk about job offers or "anything" I'm always there to have a chat!</p>
       <div className="container flex flex-col gap-4 mt-16 md:mt-0 lg:p-16">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full ">
           {inputs.map(
