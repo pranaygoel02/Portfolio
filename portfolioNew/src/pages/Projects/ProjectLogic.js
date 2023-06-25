@@ -19,20 +19,20 @@ export const ProjectLogic = () => {
 
   const [projects, setProjects] = useState([]);
 
-  const getProjects = useCallback(async () => {
-    try {
-      const database = new Databases(client);
-      const res = await database.listDocuments(
-        import.meta.env.VITE_DB_ID,
-        import.meta.env.VITE_PROJECTS_COLLECTION_ID,
-      )
-      console.log(res);
-      setProjects(prev => res.documents);
-    }
-    catch(err) {
-      console.log(err);
-    }
-  },[query])
+  // const getProjects = useCallback(async () => {
+  //   try {
+  //     const database = new Databases(client);
+  //     const res = await database.listDocuments(
+  //       import.meta.env.VITE_DB_ID,
+  //       import.meta.env.VITE_PROJECTS_COLLECTION_ID,
+  //     )
+  //     console.log(res);
+  //     setProjects(prev => res.documents);
+  //   }
+  //   catch(err) {
+  //     console.log(err);
+  //   }
+  // },[query])
 
   // useEffect(() => {
   //   getProjects();
