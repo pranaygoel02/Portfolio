@@ -28,20 +28,20 @@ function ProjectModal() {
 
   return (
     <motion.div
-    initial={{ height: 0 }}
-    animate={{  height: "100vh" }}
-    transition={{ duration: 1 }}
-    exit={{  height: 0 }}
+    // initial={{ height: 0 }}
+    // animate={{  height: "100vh" }}
+    // transition={{ duration: 1 }}
+    // exit={{  height: 0 }}
       id="modal-wrapper"
       className="fixed flex justify-end items-end inset-0 w-full h-full backdrop-blur-sm md:px-4 z-20 bg-black/60"
     >
       <motion.div
         initial={{ height: 0 }}
-        animate={{  height: "85vh" }}
-        transition={{ duration: 1 }}
+        animate={{  height: "95vh" }}
+        transition={{ duration: 1.2 }}
         exit={{  height: 0 }}
         id="modal"
-        className={`relative w-full h-[85vh] ${
+        className={`relative w-full h-[95vh] ${
           theme ? "bg-dark" : "bg-white"
         } rounded-t-3xl shadow-lg flex flex-col overflow-auto p-6 md:p-8 pt-12 md:pt-16 space-y-8`}
       >
@@ -59,14 +59,14 @@ function ProjectModal() {
                 <BsGithub className="absolute w-full text-gray-800 text-[6rem]" />{" "}
                 <p className="z-10 drop-shadow-2xl text-l">GitHub</p>
               </Link>
-              <Link
+              {project?.live && <Link
                 className="flex p-2 gap-2 rounded-3xl text-white bg-black items-center text-2xl aspect-square md:aspect-[2/1] text-center justify-center relative"
                 target={"_blank"}
                 to={project?.live}
               >
                 <BiLinkExternal className="absolute w-full text-gray-800 text-[6rem]" />{" "}
                 <p className="z-10 drop-shadow-2xl text-3xl">Live Site</p>
-              </Link>
+              </Link>}
             </div>
           </div>
           <div className="w-full space-y-4">
@@ -92,10 +92,10 @@ function ProjectModal() {
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src={project?.image}
           className="max-h-[36rem] rounded-3xl object-cover object-center"
-        />
+        /> */}
       </motion.div>
       <button
         onClick={handleProjectModalClose}

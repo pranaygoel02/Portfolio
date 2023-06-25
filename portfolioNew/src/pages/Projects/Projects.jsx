@@ -17,7 +17,7 @@ function Projects() {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q");
 
-  const { handleProjectModalOpen, projectModalOpen } = ProjectLogic();
+  const { handleProjectModalOpen, projectModalOpen, projects: dbProjects } = ProjectLogic();
 
   //console.log(query);
 
@@ -65,12 +65,12 @@ function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full py-4 pb-12 container">
           {links
             .find((link) => link.query === query)
-            ?.projects.sort((a, b) => {
+            ?.projects?.sort((a, b) => {
               return a.year > b.year;
             })
             .map((project, id) => (
               <Suspense fallback={<div className="w-full h-[400px] rounded-xl bg-[#0a0a0a] outline outline-1 outline-neutral-800 animate-pulse"></div>}>
-              <ProjectCard2 id={id} key={project?.title} {...project} />
+                <ProjectCard2 id={id} key={project?.title} {...project} />
               </Suspense>
             ))}
         </div>
