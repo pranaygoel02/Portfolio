@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useProjectModal } from "../../context/projectModalContext";
-import client from "../../appwrite-config";
-import { Databases } from "appwrite";
+// import client from "../../appwrite-config";
+// import { Databases } from "appwrite";
 import { useSearchParams } from "react-router-dom";
 
 export const ProjectLogic = () => {
