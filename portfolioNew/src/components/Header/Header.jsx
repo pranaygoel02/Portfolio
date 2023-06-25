@@ -19,9 +19,9 @@ function Header() {
         P.
       </Link>
       <div className="inline-flex items-center gap-4">
-        <button id="cv-btn" className="btn">
+        <Link to={'/resume'} id="cv-btn" className="btn">
           Download Resume
-        </button>
+        </Link>
         {/* <ThemeToggler /> */}
         <Link to={'https://github.com/pranaygoel02'} target="_blank" title="GitHub">
           <AiFillGithub className="text-2xl text-neutral-300" />

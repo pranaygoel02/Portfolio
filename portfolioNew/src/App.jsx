@@ -10,6 +10,7 @@ import Projects from "./pages/Projects/Projects.jsx";
 import { useTheme } from "./context/themeContext.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import { Toaster } from "react-hot-toast";
+import Resume from "./pages/Resume/Resume.jsx";
 
 function App() {
   const { theme } = useTheme();
@@ -26,6 +27,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact/>} />
+              <Route path="/resume" element={<Resume/>} />
               <Route path="*" element={<h1>Oops! 404 Not Found.</h1>} />
             </Routes>
             <Header />

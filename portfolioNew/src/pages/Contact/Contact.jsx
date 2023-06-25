@@ -83,6 +83,7 @@ function Contact() {
     setEmail((prev) => "");
     setSubject((prev) => "");
     setMessage((prev) => "");
+    setActiveInput((prev) => 0);
   }
 
   return (

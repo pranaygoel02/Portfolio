@@ -58,6 +58,8 @@ function Navbar() {
 
   // },[])
 
+  if(pathname === '/resume') return null;
+
   return (
     <motion.div
       id="navbar"

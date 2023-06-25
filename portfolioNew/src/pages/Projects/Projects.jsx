@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageHead from "../../components/Heading/PageHead";
 import ProjectCard from "./ProjectCard";
@@ -9,7 +9,8 @@ import { ProjectLogic } from "./ProjectLogic";
 import { useTheme } from "../../context/themeContext";
 import NewProjectCard from "./NewProjectCard";
 import CustomNavLink from "../../components/Navbar/CustomNavLink";
-import ProjectCard2 from "./ProjectCard2";
+
+const ProjectCard2 = React.lazy(() => import("./ProjectCard2"))
 
 function Projects() {
   const navigate = useNavigate();
@@ -68,7 +69,9 @@ function Projects() {
               return a.year > b.year;
             })
             .map((project, id) => (
+              <Suspense fallback={<div className="w-full h-[400px] rounded-xl bg-[#0a0a0a] outline outline-1 outline-neutral-800 animate-pulse"></div>}>
               <ProjectCard2 id={id} key={project?.title} {...project} />
+              </Suspense>
             ))}
         </div>
       </div>
