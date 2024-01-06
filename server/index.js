@@ -16,7 +16,7 @@ app.get("/", (req,res)=>{
     res.send("Hello");
 })
 
-app.get("/",(req,res) => {
+app.get("/ip",(req,res) => {
     const clientIP = req.ip || req.headers['x-forwarded-for'] || req.connection.remoteAddress
       res.json({ip: clientIP});
 })
