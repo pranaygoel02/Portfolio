@@ -16,6 +16,10 @@ app.get("/", (req,res)=>{
     res.send("Hello");
 })
 
+app.get("/",(req,res) => {
+    const clientIP = req.ip || req.headers['x-forwarded-for'] || req.connection.remoteAddress
+      res.json({ip: clientIP});
+})
 
 app.post("/sendEmail",(req,res)=>{
     let data = req.body;
