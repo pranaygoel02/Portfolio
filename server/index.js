@@ -17,8 +17,13 @@ app.get("/", (req,res)=>{
 })
 
 app.get("/ip",(req,res) => {
-    // const clientIP = req.ip || req.headers['x-forwarded-for'] || req.connection.remoteAddress
-      res.json({ip1: req.ip,ip2: req.headers['x-forwarded-for'], ip3: req.connection.remoteAddress});
+    try {
+    const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+      res.json({ip: clientIP});
+    }
+    catch(err) {
+        res.json({ip: "127.0.0.1"})
+    }
 })
 
 app.post("/sendEmail",(req,res)=>{
