@@ -5,6 +5,8 @@ const cors = require('cors');
 const { verify } = require('crypto');
 const app = express();
 
+const CMDKRoute = require("./routes/CMDK/index");
+
 require('dotenv').config();
 
 
@@ -15,6 +17,8 @@ app.use(cors());
 app.get("/", (req,res)=>{
     res.send("Hello");
 })
+
+app.use("/cmdk", CMDKRoute);
 
 app.get("/ip",(req,res) => {
     try {
