@@ -14,8 +14,7 @@ function ProjectDrawer({ children, project, show, toggle }) {
             withOverlay={true}
             snapPoints={[0, 25, 50, 75]}
             initialSnapPoint={50}
-            maxDragOffset={400}
-            // className={styles.drawer}
+            maxDragOffset={250}
             defaultStyle={true}
         >
             <ProjectDescription project={project}/>
