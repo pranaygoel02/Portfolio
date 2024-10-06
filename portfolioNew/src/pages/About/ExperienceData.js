@@ -1,21 +1,27 @@
 export const data = [
     {
         role: "Software Development Intern",
-        company: "Pephub",
-        date: "January 2023 - Present",
+        company: "Nawgati",
+        site: "http://www.nawgati.com",
+        date: "December 2023 - Present",
     },
+    {
+        role: "Software Development Intern",
+        company: "Pephub",
+        date: "January 2023 - July 2023",
+    }
 ]
 
 export const org = [
     {
         role: "Full Stack Web Developer",
         company: "IRL Amigo",
-        date: "March 2023 - Present",
+        date: "2023",
     },
     {
         role: "Full Stack Web Developer",
         company: "URECKON (UEM Kolkata)",
-        date: "October 2022 - Present",
+        date: "2022 - 2024",
     },
     {
         role: "Graphic Designer",

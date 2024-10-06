@@ -4,6 +4,10 @@
     grid-template-columns: repeat(var(--cols), minmax(0,1fr));
 }
 
+strong {
+    color: white;
+}
+
 @media screen and (max-width: 768px) {
     #exp {
         display: flex;

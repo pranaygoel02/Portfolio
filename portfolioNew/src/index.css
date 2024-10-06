@@ -13,6 +13,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+}
+
 @layer base {
   /* .active {
     @apply bg-black text-white
@@ -23,9 +27,18 @@
   .animate-up {
     animation: animate-up 0.5s ease-in-out forwards;
   }
+}
 
-
-
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
 }
 
 p {
@@ -34,6 +47,10 @@ p {
 
 .btn, button {
   @apply inline-flex gap-2 items-center bg-gray-900/50 p-2 border border-neutral-800 rounded-xl text-neutral-300 backdrop-blur-sm  placeholder:text-neutral-500 placeholder:text-sm cursor-pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 #cv-btn {

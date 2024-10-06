@@ -6,11 +6,30 @@ import Bg_Dark from "../assets/images/bg_dark.jpg";
 import LineGrid from "../assets/images/line-grid.svg";
 import Header from "./components/Header/Header.jsx";
 import About from "./pages/About/About.jsx";
-import Projects from "./pages/Projects/Projects.jsx";
+import Projects from "./pages/Projects";
 import { useTheme } from "./context/themeContext.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import { Toaster } from "react-hot-toast";
 import Resume from "./pages/Resume/Resume.jsx";
+
+const navLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
 
 function App() {
   const { theme } = useTheme();
@@ -31,7 +50,15 @@ function App() {
               <Route path="*" element={<h1>Oops! 404 Not Found.</h1>} />
             </Routes>
             <Header />
-            <Navbar />
+            <Navbar
+            links={navLinks}
+            className={'fixed bottom-[4rem] left-[50%] z-10 -translate-x-[50%]'} 
+            animation={{
+              initial: { opacity: 0, y: 100, x: "-50%" },
+              animate : { opacity: 1, y: 0, x: "-50%" },
+              transition : { duration: 0.5, delay: 1.05 }
+            }}
+            id='primary-navbar'/>
           </Router>
         </section>
       </main>

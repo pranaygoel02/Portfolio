@@ -1,77 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useTheme } from "../../context/themeContext";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import CustomNavLink from "./CustomNavLink";
+import Animation from "../Animation";
 
-function Navbar() {
+function Navbar({ links=[], className, animation, id }) {
+  
   const { pathname } = useLocation();
-  const [activeTab, setActiveTab] = useState(pathname);
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("q");
 
+  
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveTab((prev) => pathname);
   }, [pathname]);
 
-  //console.log(pathname);
-
   const { theme } = useTheme();
-
-  const navLinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  //   const navbar = document.getElementById("navbar");
-  //   let currentScrollPos = window.scrollY;
-  //   const listentToNav =  window.addEventListener("scroll", (e) => {
-  //     console.log(window.scrollY > currentScrollPos);
-  //     if(window.scrollY > currentScrollPos){
-  //       navbar.style.bottom = "-100%";
-  //     }
-  //     else{
-  //       navbar.style.bottom = "4rem";
-  //     }
-  //     currentScrollPos = window.scrollY;
-  //   });
-    
-
-  //   return () => {
-  //     window.removeEventListener("scroll", listentToNav);
-  //   }
-
-  // },[])
 
   if(pathname === '/resume') return null;
 
   return (
-    <motion.div
+    <Animation>
+    <m.div
       id="navbar"
-      className={`fixed bottom-[4rem] left-[50%] z-10 transition-all -translate-x-[50%] flex gap-3 md:gap-4 p-2 px-4 items-center justify-evenly rounded-2xl bg-white/80 text-black backdrop-blur-lg shadow-xl text-sm md:text-base flex-wrap w-max`}
-      initial={{ opacity: 0, y: 100, x: "-50%" }}
-      animate={{ opacity: 1, y: 0, x: "-50%" }}
-      transition={{ duration: 0.5, delay: 1.05 }}
+      className={`transition-all flex gap-3 md:gap-4 p-2 px-4 items-center justify-evenly rounded-2xl bg-white/80 text-black backdrop-blur-lg shadow-xl text-sm md:text-base max-w-[90vw] ${className} overflow-x-auto no-scrollbar`}
+      {...animation}
     >
-      {navLinks.map((link) => (
-        <CustomNavLink link={link} isActive={pathname === link.path} motionDivId='active-pill' />
+      {links.map((link) => (
+        <CustomNavLink link={link} isActive={link?.query === query || pathname === link.path} motionDivId={id} />
       ))}
-    </motion.div>
+    </m.div>
+    </Animation>
   );
 }
 

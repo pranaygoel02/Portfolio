@@ -11,7 +11,7 @@ import qr from '../../../assets/images/qr.png'
 import stats from '../../../assets/images/stats.png'
 import column from '../../../assets/images/column.png'
 
-export const reactProjects = [
+const reactProjects = [
     {
         title: 'SpotLight',
         description: 'Spotlight is a RSVP and Event Management Web App for Individual Creators that streamlines event planning process, effortlessly manage RSVPs, and unleash the creative vision with this intuitive platform.',
@@ -73,7 +73,7 @@ export const reactProjects = [
     },
 ]
 
-export const reactNativeProjects = [
+const reactNativeProjects = [
     {
         title: 'QHub',
         description: 'QHub is a realtime Q&A web application that enables the user to login to the web-app natively or using Google authentication, and ask questions in the Q&A section. It has a very responsive UI and is powered by the StackOverflow API.',
@@ -86,7 +86,7 @@ export const reactNativeProjects = [
     }
 ]
 
-export const nextjsProjects = [
+const nextjsProjects = [
     {
         title: 'Dotmd',
         description: 'Dotmd is a web application that enables the user to write blogs and share them with the world. It has a very responsive UI and is powered by the Next.js framework.',
@@ -99,7 +99,7 @@ export const nextjsProjects = [
     }
 ]
 
-export const jsProjects = [
+const jsProjects = [
     {
         title: 'Bibliophilia',
         description: "Bibliophilia is a mock E-book application venture which happened as a part of UEMK's entrepreneurship subject. I made a static website to showcase an E-book subscription service.",
@@ -120,7 +120,7 @@ export const jsProjects = [
     },
 ]
 
-export const frontendMentorProjects = [
+const frontendMentorProjects = [
     {
         title: '3 Column Preview Card',
         stack: ['HTML', 'CSS', 'Javascript'],
@@ -155,38 +155,27 @@ export const frontendMentorProjects = [
     }
 ]
 
-export const projects = [...reactProjects, ...reactNativeProjects, ...nextjsProjects, ...jsProjects, ...frontendMentorProjects]
-
-export const links = [
-    {
-        query: 'all',
-        name: 'All',
-        projects: projects
-    },
-    {
-        query: 'react',
+const projects = {
+    react: {
         name: 'ReactJs',
         projects: reactProjects
     },
-    {
-        query: 'react-native',
+    'react-native': {
         name: 'React Native',
         projects: reactNativeProjects
     },
-    {
-        query: 'next',
+    next: {
         name: 'NextJs',
         projects: nextjsProjects
     },
-    {
-        query: 'javascript',
+    javascript: {
         name: 'JS',
         projects: jsProjects
     },
-    {
-        query: 'frontend-mentor-challenge',
+    'frontend-mentor-challenge': {
         name: 'Frontend Mentor Challenge',
         projects: frontendMentorProjects
-    },
-]
+    }
+}
 
+export default projects;
