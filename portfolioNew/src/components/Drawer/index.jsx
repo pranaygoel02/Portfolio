@@ -29,6 +29,7 @@ function Drawer({ children, showDrawer = false, toggleShowDrawer, snapPoints = [
     const snapPoint = useMotionValue(initialSnapPoint);
 
     const snapPointsInPx = useMemo(() => snapPoints.map(v => Number((v / 100 * dimensions?.height).toFixed(0))), [dimensions?.height, snapPoints]);
+    const maxSnapPoint = snapPointsInPx[snapPointsInPx.length - 1];
 
     useEffect(() => {
         if (showDrawer) {
@@ -44,25 +45,31 @@ function Drawer({ children, showDrawer = false, toggleShowDrawer, snapPoints = [
         if (contentRef?.current) contentRef.current.style.overflow = 'visible';
     }
 
+    const closeDrawer = useCallback(() => {
+        snapPoint.set(dimensions.height + 10);
+        setTimeout(() => {
+            toggleShowDrawer?.();
+        }, 300);
+    }, [dimensions?.height, toggleShowDrawer])
+
     const handleDragEnd = useCallback((e, info) => {
         const { offset } = info;
         if (offset.y > maxDragOffset) {
-            snapPoint.set(dimensions.height + 10);
-
-            setTimeout(() => {
-                toggleShowDrawer?.();
-            }, 300);
-
+            closeDrawer();
             return;
         };
         
         const prevSnapPoint = snapPoint.getPrevious();
         let newSnapPoint = prevSnapPoint + offset.y;
+        if (newSnapPoint > maxSnapPoint) {
+            closeDrawer();
+            return;
+        }
         const closestSnapPoint = snapPointsInPx.findClosestPoint(newSnapPoint);
         snapPoint.set(closestSnapPoint);
 
         if (contentRef?.current) contentRef.current.style.overflow = 'auto';
-    }, [dimensions?.height, initialSnapPoint, snapPoint, snapPointsInPx, toggleShowDrawer, maxDragOffset]);
+    }, [dimensions?.height, initialSnapPoint, maxSnapPoint, snapPoint, snapPointsInPx, toggleShowDrawer, maxDragOffset]);
 
     const drawerHeight = useTransform(snapPoint, [0, dimensions?.height], [dimensions?.height, 0]);
 

@@ -1,7 +1,7 @@
 .handle {
     position: relative;
-    width: 60px;
-    height: 2.8px;
+    width: min(80px, 100%);
+    height: 6px;
     border-radius: 5px;
     margin: auto;
     cursor: grab;
@@ -12,7 +12,7 @@
     content: "";
     left: 50%;
     top: 50%;
-    width: 82px;
-    height: 24.8px;
+    width: 100%;
+    height: calc(100% + 70px);
     transform: translate(-50%, -50%);
 }

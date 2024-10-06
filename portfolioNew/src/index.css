@@ -45,6 +45,10 @@ p {
   @apply text-neutral-400 font-normal
 }
 
+p {
+  text-wrap: balance;
+}
+
 .btn, button {
   @apply inline-flex gap-2 items-center bg-gray-900/50 p-2 border border-neutral-800 rounded-xl text-neutral-300 backdrop-blur-sm  placeholder:text-neutral-500 placeholder:text-sm cursor-pointer;
 }
@@ -58,7 +62,7 @@ button:disabled {
 }
 
 .container {
-  @apply max-w-[95%] md:max-w-[80%] mx-auto py-4 w-full
+  @apply max-w-[90%] md:max-w-[80%] mx-auto w-full
 }
 
 
