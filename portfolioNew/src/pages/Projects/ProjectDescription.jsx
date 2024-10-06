@@ -19,28 +19,26 @@ function ProjectDescription({ project }) {
                 <div className="flex flex-col space-y-6 w-full">
                     {project?.description && <p>{project?.description}</p>}
                     <div className="grid grid-cols-2 gap-4 w-full h-full">
-                        <Link
-                            className="flex p-2 gap-2 rounded-3xl text-white bg-black items-center text-2xl aspect-square md:aspect-[2/1] text-center justify-center relative"
-                            target={"_blank"}
-                            to={project?.git}
-                        >
-                            <BsGithub className="absolute w-full text-gray-800 text-[6rem]" />
-                            <p className="z-10 drop-shadow-2xl text-l">
-                                GitHub
-                            </p>
-                        </Link>
-                        {project?.live && (
-                            <Link
-                                className="flex p-2 gap-2 rounded-3xl text-white bg-black items-center text-2xl aspect-square md:aspect-[2/1] text-center justify-center relative"
-                                target={"_blank"}
-                                to={project?.live}
-                            >
-                                <BiLinkExternal className="absolute w-full text-gray-800 text-[6rem]" />
-                                <p className="z-10 drop-shadow-2xl text-3xl">
-                                    Live Site
-                                </p>
-                            </Link>
-                        )}
+                        {
+                            [
+                                { to: project?.git, name: 'Github', Icon: BsGithub },
+                                { to: project?.live, name: 'Live Site', Icon: BiLinkExternal },
+                            ].map(({ to, name, Icon}) => {
+                                if (!to) return null;
+                                return (
+                                    <Link
+                                        className="flex p-2 gap-2 rounded-3xl text-white bg-black items-center text-2xl aspect-square sm:aspect-[3/2] lg:aspect-[2/1] text-center justify-center relative overflow-hidden"
+                                        target={"_blank"}
+                                        to={to}
+                                    >
+                                        <Icon className="absolute w-full text-gray-800 text-[5rem] md:text-[6rem]" />
+                                        <p className="z-10 drop-shadow-2xl text-l">
+                                            {name}
+                                        </p>
+                                    </Link>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 <div className="w-full space-y-4">
