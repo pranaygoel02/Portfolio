@@ -45,8 +45,9 @@ function ProjectDescription({ project }) {
                     {
                         [
                             {label: 'Stack', content: project?.stack?.join(", ")},
+                            {label: 'Implementations', content: project?.implementations?.join(", ")},
                             {label: 'Year', content: project?.year}
-                        ]?.map(({ label, content }) => (
+                        ]?.map(({ label, content }) => !content ? null : (
                             <div key={label}>
                                 <label className="text-neutral-300 text-sm font-semibold">{label}</label>
                                 <p
