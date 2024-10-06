@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
@@ -18,11 +18,11 @@ function CustomNavLink({link, isActive, motionDivId}) {
           className="absolute inset-0 bg-black"
         ></motion.div>
       )}
-      <span className={`relative ${isActive && "text-white"} w-full`}>
+      <span className={`relative ${isActive && "text-white"} w-full whitespace-nowrap`}>
         {link.name}
       </span>
     </NavLink>
   );
 }
 
-export default CustomNavLink;
+export default memo(CustomNavLink);
