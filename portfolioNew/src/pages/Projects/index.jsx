@@ -27,10 +27,7 @@ function ProjectPage() {
           {
             Object.entries(projects).map(([key, projectData]) => {
               if (query && query !== key) return null;
-              return projectData.projects.sort((a, b) => {
-                return a.year > b.year;
-              })
-              .map((project, index) => (
+              return projectData.projects.map((project, index) => (
                 <Suspense fallback={<div className="w-full h-[400px] rounded-xl bg-[#0a0a0a] outline outline-1 outline-neutral-800 animate-pulse"></div>}>
                   <ProjectCard id={key + index} key={project?.title} {...project} onClick={()=>{
                     setSearchParams({

@@ -23,25 +23,6 @@ const reactProjects = [
         color: 'rgb(256,100,50)'
     },
     {
-        title: 'Portfolio Website (Old)',
-        description: 'This is my old portfolio website. It is hosted on Vercel. It is a responsive website and is mobile friendly.',
-        stack: ['React.js', 'CSS', 'MaterialUI'],
-        image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/1d71e854126521.594e1be39b6b1.png',
-        year: 2022,
-        git: 'https://github.com/pranaygoel02/Portfolio/tree/master/portfolio',
-        live: 'https://pranaygoel.vercel.app/',
-        color: 'rgb(256,100,50)'
-    },
-    {
-        title: 'Debugger Quiz Application',
-        description: 'Debugger Quiz is a web application that enables the user to take quizzes on various topics.',
-        stack: ['React.js', 'TailwindCSS','Node.js', 'Express.js', 'MongoDB'],
-        image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/1d71e854126521.594e1be39b6b1.png',
-        year: 2022,
-        git: 'https://github.com/pranaygoel02/Debugger-Quiz/tree/master',
-        live: ''
-    },
-    {
         title: 'MedEasy',
         description: 'MedEasy is a web application that enables the user to search for doctors and book their appointments online.',
         stack: ['React.js', 'TailwindCSS', 'MongoDB', 'Node.js', 'Express.js'],
@@ -60,6 +41,25 @@ const reactProjects = [
         git: 'https://github.com/pranaygoel02/YTAudio',
         live: 'https://yt-audio.vercel.app/',
         color: '#7209b7'
+    },
+    {
+        title: 'Portfolio Website (Old)',
+        description: 'This is my old portfolio website. It is hosted on Vercel. It is a responsive website and is mobile friendly.',
+        stack: ['React.js', 'CSS', 'MaterialUI'],
+        image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/1d71e854126521.594e1be39b6b1.png',
+        year: 2022,
+        git: 'https://github.com/pranaygoel02/Portfolio/tree/master/portfolio',
+        live: 'https://pranaygoel.vercel.app/',
+        color: 'rgb(256,100,50)'
+    },
+    {
+        title: 'Debugger Quiz Application',
+        description: 'Debugger Quiz is a web application that enables the user to take quizzes on various topics.',
+        stack: ['React.js', 'TailwindCSS','Node.js', 'Express.js', 'MongoDB'],
+        image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/1d71e854126521.594e1be39b6b1.png',
+        year: 2022,
+        git: 'https://github.com/pranaygoel02/Debugger-Quiz/tree/master',
+        live: ''
     },
     {
         title: 'Currently.in',
@@ -114,7 +114,7 @@ const jsProjects = [
         description: 'Blackjack is a popular card game. I have tried to implement the game logic via my code. I have also given the game a user friendly graphical interface that players would like.',
         stack: ['HTML', 'CSS', 'JQuery', 'Javascript'],
         image: blackjack,
-        year: '2021',
+        year: 2021,
         git: 'https://github.com/pranaygoel02/Blackjack-Game',
         live: 'https://pranaygoel02.github.io/Blackjack-Game/'
     },
@@ -125,7 +125,7 @@ const frontendMentorProjects = [
         title: '3 Column Preview Card',
         stack: ['HTML', 'CSS', 'Javascript'],
         image: column,
-        year: '2021',
+        year: 2021,
         git: 'https://github.com/pranaygoel02/3-Column-Car-preview-card',
         live: 'https://pranaygoel02.github.io/3-Column-Car-preview-card/'
     },
@@ -133,7 +133,7 @@ const frontendMentorProjects = [
         title: 'Statistics Card',
         image: stats,
         stack: ['HTML', 'CSS', 'Javascript'],
-        year: '2021',
+        year: 2021,
         git: 'https://github.com/pranaygoel02/Stats-Preview-Card',
         live: 'https://pranaygoel02.github.io/Stats-Preview-Card/'
     },
@@ -141,7 +141,7 @@ const frontendMentorProjects = [
         title: 'NFT Card',
         stack: ['HTML', 'CSS', 'Javascript'],
         image: nft,
-        year: '2021',
+        year: 2021,
         git: 'https://github.com/pranaygoel02/NFT-preview-card',
         live: 'https://pranaygoel02.github.io/NFT-preview-card/'
     },
@@ -149,7 +149,7 @@ const frontendMentorProjects = [
         title: 'QR Code Card',
         stack: ['HTML', 'CSS', 'Javascript'],
         image: qr,
-        year: '2021',
+        year: 2021,
         git: 'https://github.com/pranaygoel02/QR-Code-Element-Card',
         live: 'https://pranaygoel02.github.io/QR-Code-Element-Card/'
     }
