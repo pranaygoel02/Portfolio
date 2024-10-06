@@ -52,7 +52,7 @@ function App() {
             <Header />
             <Navbar
             links={navLinks}
-            className={'fixed bottom-[4rem] left-[50%] z-10 -translate-x-[50%]'} 
+            className={'fixed bottom-[3rem] md:bottom-[4rem] left-[50%] z-10 -translate-x-[50%]'} 
             animation={{
               initial: { opacity: 0, y: 100, x: "-50%" },
               animate : { opacity: 1, y: 0, x: "-50%" },
