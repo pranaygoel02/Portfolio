@@ -19,9 +19,7 @@ function About() {
   const animate = inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 };
 
   const desc = `I'm a web developer and a tech enthusiast based in Kolkata, India.
-  Currently a Software Development Intern at Pephub, a startup that
-  provides a platform for people to learn and grow in the field of
-  technology.`;
+  Currently a Software Development Intern at Nawgati.`;
   return (
     <div className="w-full flex flex-col min-h-screen items-start justify-start md:justify-center gap-8 p-4 py-32 md:px-8">
       <p className="text-4xl md:text-[3.8rem] font-semibold md:max-w-[90%] leading-tight md:mb-2">
@@ -36,6 +34,7 @@ function About() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          style={{textWrap: 'balance'}}
         >
           {/* {desc.split('').map((char, index) => (
           <motion.span
@@ -78,14 +77,14 @@ function About() {
           <p>
             I am currently working as a full-stack{" "}
             <strong>MERN developer</strong>. I have worked on projects driven by
-            the concept of <strong>Config driven UI and Forms.</strong>
+            the concept of <strong>Config driven UI, Forms, Dashboards and Data Visualization.</strong>
           </p>
           <p>
-            Skilled in ReactJs, NodeJs, ExpressJs, MongoDB, Redux, Firebase and Appwrite. I have
-            experience using TailwindCSS, Bootstrap and MaterialUI styled
+            Skilled in <strong>ReactJs, NodeJs, ExpressJs, MongoDB, Redux.</strong> I have
+            experience using TailwindCSS, Bootstrap, Firebase, Appwrite and MaterialUI styled
             components.
           </p>
-          <p>At present I am working with NextJS 13.</p>
+          <p>At present I am working with <strong>NextJS</strong>, and trying my hands on Flutter as well.</p>
         </motion.div>
       </div>
       <SkillMarquee />
