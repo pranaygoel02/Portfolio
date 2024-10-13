@@ -1,15 +1,16 @@
-import MedEasy from '../../assets/images/medeasy.png'
-import ytaudio from '../../assets/images/ytaudio2.png'
-import currently from '../../assets/images/currently2.png'
-import spotlight from '../../assets/images/spotlight.png'
-import dotmd from '../../assets/images/dotmd.png'
-import qhub from '../../assets/images/qhub.png'
-import bibliophilia from '../../assets/images/bibliophilia.png'
-import blackjack from '../../assets/images/blackjack.png'
-import nft from '../../assets/images/nft.png'
-import qr from '../../assets/images/qr.png'
-import stats from '../../assets/images/stats.png'
-import column from '../../assets/images/column.png'
+import MedEasy from '../../../assets/images/medeasy.png'
+import ytaudio from '../../../assets/images/ytaudio2.png'
+import currently from '../../../assets/images/currently2.png'
+import spotlight from '../../../assets/images/spotlight.png'
+import dotmd from '../../../assets/images/dotmd.png'
+import qhub from '../../../assets/images/qhub.png'
+import bibliophilia from '../../../assets/images/bibliophilia.png'
+import blackjack from '../../../assets/images/blackjack.png'
+import nft from '../../../assets/images/nft.png'
+import qr from '../../../assets/images/qr.png'
+import stats from '../../../assets/images/stats.png'
+import column from '../../../assets/images/column.png'
+import cmdk from '../../../assets/images/cmdk.png'
 
 const reactProjects = [
     {
@@ -87,6 +88,17 @@ const reactNativeProjects = [
 ]
 
 const nextjsProjects = [
+    {
+        title: 'Command Pallete',
+        description: 'A minimal, fast search palette, featuring fuzzy matching for flexible query results. It dynamically renders search options as you type, ensuring quick and responsive feedback. With built-in keyboard navigation (arrow keys to navigate, Enter to select, Esc to close), it provides a smooth and intuitive user experience, perfect for boosting productivity in your app or workflow.',
+        stack: ['Next.js', 'CSS'],
+        implementations: ['Fuzzy search', 'Config driven UI'],
+        image: cmdk,
+        year: 2023,
+        git: 'https://github.com/pranaygoel02/Command-Pallete/tree/main',
+        live: 'https://command-pallete.vercel.app/',
+        color: 'rgb(256,100,50)'
+    },
     {
         title: 'Dotmd',
         description: 'Dotmd is a web application that enables the user to write blogs and share them with the world. It has a very responsive UI and is powered by the Next.js framework.',
