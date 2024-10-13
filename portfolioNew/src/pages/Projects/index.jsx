@@ -4,7 +4,7 @@ import PageHead from '../../components/Heading/PageHead'
 import Navbar from '../../components/Navbar/Navbar';
 import ProjectCard from './Card';
 import ProjectDrawer from './ProjectDrawer';
-import projects from './data';
+import projects from '../../lib/projectsData';
 
 const navLinks = Object.entries(projects).map(([key,value]) => ({ name: value.name, query: key }));
 

@@ -79,6 +79,7 @@ function Drawer({ children, showDrawer = false, toggleShowDrawer, snapPoints = [
                 <AnimatePresence>
                     {showDrawer && (
                         <m.div
+                            onClick={() => closeDrawer()}
                             key='drawer'
                             ref={wrapperRef}
                             className="fixed inset-0 z-[100] w-full h-full bg-black bg-opacity-50 backdrop-blur"
@@ -88,6 +89,7 @@ function Drawer({ children, showDrawer = false, toggleShowDrawer, snapPoints = [
                             transition={{ duration: 0.3 }}
                         >
                             <m.main
+                                onClick={(e) => e.stopPropagation()}
                                 className={`h-full w-full rounded-t-xl transition-all ${background}`}
                                 drag="y"
                                 dragMomentum={false}

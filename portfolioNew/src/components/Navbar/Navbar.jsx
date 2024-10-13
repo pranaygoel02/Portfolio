@@ -16,8 +16,6 @@ function Navbar({ links=[], className, animation, id }) {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const { theme } = useTheme();
-
   if(pathname === '/resume') return null;
 
   return (
