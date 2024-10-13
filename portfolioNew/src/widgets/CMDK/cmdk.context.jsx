@@ -16,10 +16,12 @@ import { searchCmdkMatchingResults } from "./lib/searchCmdkMatchingResults";
 import { cmdkDefaultCommands } from "./lib/commands";
 import useCmdkReducer, {actions} from "./reducers/cmdkReducer";
 import CMDK_DATA from '../../lib/cmdkData'
+import { useNavigate } from 'react-router-dom';
 
 const CMDKContext = createContext();
 export function CMDKProvider({ children }) {
     const [state, dispatch] = useCmdkReducer();
+    const navigate = useNavigate();
   
     const {
       showCommandPalette,
@@ -102,7 +104,11 @@ export function CMDKProvider({ children }) {
         console.log(obj);
         if (obj) {
           if (obj.url) {
-            window.open(obj.url, "_blank");
+            console.log(obj.url);
+            if (obj.url.includes('http://') || obj.url.includes('https://'))
+              window.open(obj.url, "_blank");
+            else navigate(obj.url);
+            closeCommandPalette();
           } else if (obj.type === "action") {
             dispatch({ type: actions.SET_ACTION_STACK, payload: obj.stack });
           }
