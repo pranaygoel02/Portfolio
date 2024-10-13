@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MdLightMode } from "react-icons/md";
-import { useTheme } from "../../context/themeContext";
-import ThemeToggler from "../Theme/ThemeToggler";
+import Search from '../../widgets/CMDK/components/Search';
 
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
@@ -18,13 +16,14 @@ function Header() {
       <Link to={"/"} className="font-bold text-lg">
         P.
       </Link>
-      <div className="inline-flex items-center gap-4">
-        <Link to={'/resume'} id="cv-btn" className="btn">
+      <div className="flex items-center gap-2">
+        <Search />
+        <Link to={'/resume'} className="btn header-btn">
           Download Resume
         </Link>
         {/* <ThemeToggler /> */}
         <Link to={'https://github.com/pranaygoel02'} target="_blank" title="GitHub">
-          <AiFillGithub className="text-2xl text-neutral-300" />
+          <AiFillGithub className="text-4xl text-neutral-300" />
         </Link>
       </div>
     </motion.div>
