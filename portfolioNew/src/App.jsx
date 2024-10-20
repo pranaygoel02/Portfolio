@@ -11,6 +11,7 @@ import { useTheme } from "./context/themeContext.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import { Toaster } from "react-hot-toast";
 import Resume from "./pages/Resume/Resume.jsx";
+import CMDK from "./widgets/CMDK/components/CMDK.jsx";
 
 const navLinks = [
   {
@@ -50,6 +51,7 @@ function App() {
               <Route path="*" element={<h1>Oops! 404 Not Found.</h1>} />
             </Routes>
             <Header />
+            <CMDK />
             <Navbar
             links={navLinks}
             className={'fixed bottom-[3rem] md:bottom-[4rem] left-[50%] z-10 -translate-x-[50%]'} 
