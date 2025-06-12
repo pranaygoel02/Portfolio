@@ -1,9 +1,15 @@
 export const data = [
     {
+        role: "Software Development Engineer",
+        company: "Nawgati",
+        site: "http://www.nawgati.com",
+        date: "May 2025 - Present",
+    },
+    {
         role: "Software Development Intern",
         company: "Nawgati",
         site: "http://www.nawgati.com",
-        date: "December 2023 - Present",
+        date: "December 2023 - April 2025",
     },
     {
         role: "Software Development Intern",
@@ -63,7 +69,7 @@ export const education = [
         role: "B.Tech in Computer Science and Engineering",
         company: "UEM Kolkata",
         date: "2021 - Present",
-        marks: "CGPA: 9.69",
+        marks: "CGPA: 8.6",
     },
     {
         role: "ISC (XII)",
