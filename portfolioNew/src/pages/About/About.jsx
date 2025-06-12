@@ -19,7 +19,7 @@ function About() {
   const animate = inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 };
 
   const desc = `I'm a web developer and a tech enthusiast based in Kolkata, India.
-  Currently a Software Development Intern at Nawgati.`;
+  Currently a Software Development Engineer at Nawgati.`;
   return (
     <div className="w-full flex flex-col min-h-screen items-start justify-start md:justify-center gap-8 p-4 py-32 md:px-8">
       <p className="text-4xl md:text-[3.8rem] font-semibold md:max-w-[90%] leading-tight md:mb-2">
