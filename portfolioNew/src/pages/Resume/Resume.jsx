@@ -1,5 +1,5 @@
 import React from 'react'
-import PDF from '../../../assets/Pranay_Goel_Resume_2024.pdf'
+import PDF from '../../../assets/Pranay_Goel_Resume_June_2025.pdf'
 
 function Resume() {
   return (
